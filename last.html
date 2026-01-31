@@ -1,0 +1,632 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Beautiful Minahil Israr ✨</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Quicksand:wght@300;400;500;600&display=swap");
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        min-height: 100vh;
+        background: linear-gradient(
+          135deg,
+          #e194a6 0%,
+          #d2d2ea 25%,
+          #dd7bc7 50%,
+          #e6e6fa 75%,
+          #f3a7b9 100%
+        );
+        background-size: 400% 400%;
+        animation: gradientFlow 15s ease infinite;
+        font-family: "Quicksand", sans-serif;
+        overflow-x: hidden;
+        color: #4a4a4a;
+      }
+
+      @keyframes gradientFlow {
+        0% {
+          background-position: 0% 50%;
+        }
+
+        50% {
+          background-position: 100% 50%;
+        }
+
+        100% {
+          background-position: 0% 50%;
+        }
+      }
+
+      /* Enhanced Sparkle Effect */
+      .magic-sparkles {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        z-index: 1;
+      }
+
+      .sparkle {
+        position: absolute;
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background-color: white;
+        animation: twinkle var(--duration, 4s) ease-in-out infinite;
+        opacity: 0;
+      }
+
+      @keyframes twinkle {
+        0%,
+        100% {
+          opacity: 0;
+          transform: scale(0.5);
+        }
+
+        50% {
+          opacity: 0.8;
+          transform: scale(1);
+        }
+      }
+
+      /* Generate 50 sparkles with different positions and animations */
+      .magic-sparkles::before,
+      .magic-sparkles::after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-image: radial-gradient(circle, white 1px, transparent 1px);
+        background-size: 50px 50px;
+        animation: sparkleLayer 8s linear infinite;
+        opacity: 0.5;
+      }
+
+      .magic-sparkles::after {
+        animation-delay: -4s;
+        transform: rotate(45deg);
+      }
+
+      @keyframes sparkleLayer {
+        0% {
+          transform: translateY(0);
+        }
+
+        100% {
+          transform: translateY(-50px);
+        }
+      }
+
+      /* Floating Hearts */
+      .floating-hearts {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        z-index: 2;
+      }
+
+      .heart {
+        position: absolute;
+        font-size: 1.5rem;
+        color: rgba(255, 105, 180, 0.6);
+        animation: floatHeart var(--float-duration, 6s) ease-in-out infinite;
+        animation-delay: var(--delay, 0s);
+      }
+
+      @keyframes floatHeart {
+        0% {
+          transform: translate(0, 100vh) rotate(0deg);
+        }
+
+        100% {
+          transform: translate(var(--translate-x, 0), -100vh) rotate(360deg);
+        }
+      }
+
+      /* Welcome Section */
+      .welcome {
+        text-align: center;
+        padding: 4rem 2rem;
+        position: relative;
+        z-index: 3;
+      }
+
+      .welcome h1 {
+        font-family: "Dancing Script", cursive;
+        font-size: 4rem;
+        color: #e8147e;
+        text-shadow:
+          0 0 4px rgba(255, 255, 255, 1),
+          0 0 10px rgba(255, 255, 255, 0.9),
+          1px 1px 0 rgba(255, 255, 255, 0.95),
+          -1px -1px 0 rgba(255, 255, 255, 0.95),
+          1px -1px 0 rgba(255, 255, 255, 0.95),
+          -1px 1px 0 rgba(255, 255, 255, 0.95);
+        animation: fadeInScale 2s ease;
+      }
+
+      .welcome p {
+        font-size: 1.2rem;
+        max-width: 600px;
+        margin: 1.5rem auto;
+        line-height: 1.6;
+        text-shadow:
+          0 0 2px rgba(255, 255, 255, 0.9),
+          1px 1px 0 rgba(255, 255, 255, 0.85),
+          -1px -1px 0 rgba(255, 255, 255, 0.85);
+        animation: fadeIn 2s ease 0.5s both;
+      }
+
+      /* Enhanced Memory Cards */
+      .memory-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 2rem;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+        z-index: 3;
+        position: relative;
+      }
+
+      .memory-card {
+        background: rgba(222, 187, 222, 0.9);
+        border-radius: 20px;
+        padding: 1.5rem;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        position: relative;
+        overflow: hidden;
+      }
+
+      .memory-card:hover {
+        transform: translateY(-10px) scale(1.02);
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+      }
+
+      .memory-card::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+          45deg,
+          transparent,
+          rgba(255, 255, 255, 0.4),
+          transparent
+        );
+        transform: translateX(-100%);
+        transition: 0.5s;
+      }
+
+      .memory-card:hover::before {
+        transform: translateX(100%);
+      }
+
+      .memory-img {
+        width: 100%;
+        height: auto;
+        min-height: 200px;
+        max-height: 280px;
+        object-fit: contain;
+        border-radius: 15px;
+        margin-bottom: 1rem;
+        transition: transform 0.5s ease;
+      }
+
+      .memory-card:hover .memory-img {
+        transform: scale(1.05);
+      }
+
+      .memory-date {
+        font-family: "Dancing Script", cursive;
+        color: #eb137f;
+        font-size: 1.3rem;
+        margin-bottom: 0.5rem;
+        text-shadow:
+          0 0 3px rgba(255, 255, 255, 0.95),
+          1px 1px 0 rgba(255, 255, 255, 0.9),
+          -1px -1px 0 rgba(255, 255, 255, 0.9),
+          1px -1px 0 rgba(255, 255, 255, 0.9),
+          -1px 1px 0 rgba(255, 255, 255, 0.9);
+      }
+
+      .memory-caption {
+        font-size: 1rem;
+        line-height: 1.5;
+        color: #666;
+      }
+
+      /* Final Message Section */
+      .final-message {
+        text-align: center;
+        padding: 4rem 2rem;
+        background: rgba(215, 211, 211, 0.037);
+        backdrop-filter: blur(10px);
+        margin-top: 3rem;
+        position: relative;
+        z-index: 3;
+      }
+
+      .final-message h2 {
+        font-family: "Dancing Script", cursive;
+        font-size: 3rem;
+        color: #ff69b4;
+        text-shadow:
+          0 0 4px rgba(255, 255, 255, 1),
+          0 0 10px rgba(255, 255, 255, 0.9),
+          1px 1px 0 rgba(255, 255, 255, 0.95),
+          -1px -1px 0 rgba(255, 255, 255, 0.95),
+          1px -1px 0 rgba(255, 255, 255, 0.95),
+          -1px 1px 0 rgba(255, 255, 255, 0.95);
+        margin-bottom: 2rem;
+        animation: heartbeat 2s infinite;
+      }
+
+      @keyframes heartbeat {
+        0%,
+        100% {
+          transform: scale(1);
+        }
+
+        50% {
+          transform: scale(1.1);
+        }
+      }
+
+      .final-message p {
+        font-size: 1.4rem;
+        max-width: 800px;
+        margin: 0 auto 2rem;
+        line-height: 1.8;
+        text-shadow:
+          0 0 1px rgba(255, 255, 255, 0.9),
+          1px 1px 0 rgba(255, 255, 255, 0.85),
+          -1px -1px 0 rgba(255, 255, 255, 0.85);
+      }
+
+      .goodbye-btn {
+        display: inline-block;
+        padding: 1rem 2rem;
+        font-size: 1.2rem;
+        background: linear-gradient(45deg, #ff69b4, #da70d6);
+        color: white;
+        border: none;
+        border-radius: 50px;
+        cursor: pointer;
+        text-decoration: none;
+        transition: all 0.3s ease;
+        box-shadow: 0 5px 15px rgba(255, 105, 180, 0.4);
+        animation: float 3s infinite ease-in-out;
+      }
+
+      .goodbye-btn:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 20px rgba(255, 105, 180, 0.6);
+      }
+
+      @keyframes float {
+        0%,
+        100% {
+          transform: translateY(0);
+        }
+
+        50% {
+          transform: translateY(-10px);
+        }
+      }
+
+      /* Animations */
+      @keyframes fadeInScale {
+        0% {
+          opacity: 0;
+          transform: scale(0.8);
+        }
+
+        100% {
+          opacity: 1;
+          transform: scale(1);
+        }
+      }
+
+      @keyframes fadeIn {
+        0% {
+          opacity: 0;
+        }
+
+        100% {
+          opacity: 1;
+        }
+      }
+
+      /* Generate Hearts */
+      .js-generate-hearts {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        z-index: 2;
+      }
+
+      /* Custom Scrollbar */
+      ::-webkit-scrollbar {
+        width: 12px;
+      }
+
+      ::-webkit-scrollbar-track {
+        background: rgba(255, 255, 255, 0.4);
+      }
+
+      ::-webkit-scrollbar-thumb {
+        background: linear-gradient(45deg, #ff69b4, #da70d6);
+        border-radius: 6px;
+      }
+
+      /* Responsive Design */
+      @media (max-width: 768px) {
+        .welcome h1 {
+          font-size: 3rem;
+        }
+
+        .memory-container {
+          grid-template-columns: 1fr;
+          padding: 1rem;
+        }
+
+        .memory-img {
+          max-height: 55vh;
+          min-height: 180px;
+        }
+
+        .final-message h2 {
+          font-size: 2.5rem;
+        }
+      }
+
+      /* Song dedication popup */
+      .song-dedication-overlay {
+        position: fixed;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.5);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 10001;
+        padding: 1rem;
+      }
+      .song-dedication-overlay.hidden {
+        display: none;
+      }
+      .song-dedication-popup {
+        background: linear-gradient(135deg, #fff 0%, #ffe6f0 100%);
+        border-radius: 24px;
+        padding: 2rem;
+        max-width: 380px;
+        text-align: center;
+        box-shadow: 0 20px 60px rgba(255, 105, 180, 0.35);
+        border: 2px solid rgba(255, 105, 180, 0.3);
+      }
+      .song-dedication-popup p {
+        font-size: 1.15rem;
+        color: #4a4a4a;
+        line-height: 1.5;
+        margin-bottom: 1.5rem;
+      }
+      .song-dedication-popup .play-dedication-btn {
+        display: inline-block;
+        padding: 0.75rem 1.5rem;
+        font-size: 1.1rem;
+        font-family: inherit;
+        color: #fff;
+        background: linear-gradient(45deg, #ff69b4, #ff99cc);
+        border: none;
+        border-radius: 50px;
+        cursor: pointer;
+        box-shadow: 0 4px 16px rgba(255, 105, 180, 0.4);
+        transition:
+          transform 0.2s,
+          box-shadow 0.2s;
+      }
+      .song-dedication-popup .play-dedication-btn:hover {
+        transform: scale(1.05);
+        box-shadow: 0 6px 20px rgba(255, 105, 180, 0.5);
+      }
+      /* Back button */
+      .back-btn-last {
+        position: fixed;
+        top: 1rem;
+        left: 1rem;
+        z-index: 10000;
+        padding: 0.5rem 1rem;
+        font-size: 1rem;
+        font-family: inherit;
+        color: #8a2be2;
+        background: rgba(255, 255, 255, 0.95);
+        border: 2px solid rgba(255, 105, 180, 0.5);
+        border-radius: 50px;
+        text-decoration: none;
+        box-shadow: 0 4px 16px rgba(255, 105, 180, 0.3);
+        cursor: pointer !important;
+        transition:
+          transform 0.2s,
+          box-shadow 0.2s;
+      }
+      .back-btn-last:hover {
+        transform: scale(1.05);
+        box-shadow: 0 6px 20px rgba(255, 105, 180, 0.4);
+      }
+    </style>
+  </head>
+
+  <body>
+    <audio id="bg-music" src="song.mp3" loop preload="auto"></audio>
+    <div id="song-dedication-overlay" class="song-dedication-overlay">
+      <div class="song-dedication-popup">
+        <p>
+          🎵 Meenu I have dedicated our favourite song to you — it reminds me of
+          you. 🎵
+        </p>
+        <button
+          type="button"
+          class="play-dedication-btn"
+          id="play-dedication-btn"
+        >
+          Play song 💕
+        </button>
+      </div>
+    </div>
+    <a href="cause.html" class="back-btn-last" aria-label="Go back">← Back</a>
+    <div class="magic-sparkles"></div>
+    <div class="floating-hearts">
+      <!-- Hearts will be generated via CSS -->
+      <div
+        class="heart"
+        style="--float-duration: 6s; --delay: 0s; --translate-x: 20px"
+      >
+        💝
+      </div>
+      <div
+        class="heart"
+        style="--float-duration: 8s; --delay: 1s; --translate-x: -30px"
+      >
+        💖
+      </div>
+      <div
+        class="heart"
+        style="--float-duration: 7s; --delay: 2s; --translate-x: 40px"
+      >
+        💗
+      </div>
+      <div
+        class="heart"
+        style="--float-duration: 9s; --delay: 3s; --translate-x: -20px"
+      >
+        💓
+      </div>
+      <div
+        class="heart"
+        style="--float-duration: 5s; --delay: 4s; --translate-x: 30px"
+      >
+        💕
+      </div>
+    </div>
+
+    <section class="welcome">
+      <h1>My Beautiful Minahil Israr ❤️🌏</h1>
+      <p>
+        Apkay sath Guzara hua har Lamha meri Zindagi ka sb s haseen lamha hy❤️.
+      </p>
+    </section>
+
+    <div class="memory-container">
+      <div class="memory-card">
+        <img src="./d1.jpeg" alt="First Date" class="memory-img" />
+        <div class="memory-date">Your Smile Says It All</div>
+        <div class="memory-caption">
+          You’re the most sweetest human being I know, and I feel extremely
+          lucky to be yours Meenu.❤️
+        </div>
+      </div>
+      <div class="memory-card">
+        <img src="./d2.jpeg" alt="Beach Day" class="memory-img" />
+        <div class="memory-date">Hasan is always with Meenu</div>
+        <div class="memory-caption">
+          Mein Hamesha apke sath khara rhounga or apka poori Zindagi ka Sahara
+          bnounga😊💕
+        </div>
+      </div>
+      <div class="memory-card">
+        <img src="./d3.jpeg" alt="Movie Night" class="memory-img" />
+        <div class="memory-date">Purest Soul</div>
+        <div class="memory-caption">
+          Minahil, you have the most purest soul and I will protect you more
+          than my life🌸💖
+        </div>
+      </div>
+    </div>
+
+    <section class="final-message">
+      <h2>Thank You for the Memories</h2>
+      <p>
+        Every laugh, every chat, and every moment we’ve shared has been truly
+        special.💫<br />
+        I’m so grateful for the bond we have, and for the positivity you always
+        bring into my life.<br />
+        On your birthday, I just wish for endless happiness, love, and success
+        to come your way. Agar kabhi duniya thaka de na, toh yaad rakhna Hasan
+        aap ka hai. You brought warmth in my life when I least expected it. You
+        showed me love when I least expected it. You became my hope when i lost
+        all hopes. You became my support when i lost all supports. You became my
+        best friend when I lost all friends. I will never let u go. Mere wajood
+        ka ik ik zarra sirf or sirf Minahil israr s Muhabbat krta hy or hamesha
+        krta rahega jb tk ye dil dharak rha hy sirf or sirf apka hy. Allah apko
+        hamesha khush salamat abad or mera rakhe AMEEN🌸
+      </p>
+      <p>
+        Minahil I cant Thank you enough because no matter how much I tell you I
+        love you. I will never ever be able to express what really goes in my
+        heart for you. I just want you to know that no one in this entire
+        universe can love you like Hassan does. Hassan ki har dua sirf or sirf
+        Minahil k lye hogi. Meri Minahil Hamesha khush or Kamyab rahe. Koi dukh
+        meri Minahil k pass aye b na .Minahil Israr you deserve all the joy in
+        the world. Keep shining, smiling and spreading your beautiful energy.✨
+      </p>
+      <p>
+        You will be the bestest doctor in the world and I am so proud of you for
+        that. The day you entered in my life everything changed for me. I am so
+        lucky to have you in my life. I love you so much Minahil Israr. The way
+        you make me laugh and the way you make me smile is something that I will
+        never forget. Having you by my side keeps my mind at peace every single
+        day. Every day, every moment feels extremely special whenever you are
+        with me . Minahil apki cute baatein apka hasna apka ghussa krna apka
+        care karna mujhe apki har cheez s pyaar hy wo b beinteha pyaar hy Apka
+        har lamha udhaar lena chahta houn mein takay mein kabi b thakoun na ap
+        s. Apko itna pyaar doun k apko sb kuch bhool jaye. Apko apki zindagi ki
+        har takleef har dukh yaad hi na rahe. yaad rahe to sirf or sirf mera
+        pyaar jo apke k lye infinite hy. jiska koi muqabla ni hy. Mein har din
+        har raat har sham har duphr sirf or sirf apke baare m sochta houn apki
+        pyari baatein yaad krta houn. apka hr lafz mere dil mein ghar kar chuka
+        hy Apki ankhoun mein doob k marna chahta houn. Apka ho k mar jana chahta
+        houn. Apke naam k sadqay dena chahta houn. Apka dil apne pyaar s pighla
+        dena chahta houn. I want that whenever you think about love. The only
+        single name that should come to your mind should be mine. Hassan's dua
+        will always be for you. I will always be your well wisher. When the
+        whole world will be against you. I will always be by your side. I will
+        stay when everyone will leave. I will stick when the bad time happens.
+        When you will lose faith in yourself. I wll be there so that you can
+        rely on me. I will be your anker that you can hold on to me when the
+        storms get tough. Happiest Birthday one more time. I love you more than
+        anything in this observable universe.
+      </p>
+
+      <a href="#" class="goodbye-btn">Until We Meet Again 💝</a>
+    </section>
+
+    <script>
+      (function () {
+        var bgMusic = document.getElementById("bg-music");
+        var overlay = document.getElementById("song-dedication-overlay");
+        var playBtn = document.getElementById("play-dedication-btn");
+
+        if (playBtn && overlay && bgMusic) {
+          playBtn.addEventListener("click", function () {
+            bgMusic.play().catch(function () {});
+            overlay.classList.add("hidden");
+          });
+        }
+      })();
+    </script>
+  </body>
+</html>

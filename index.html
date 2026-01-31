@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Happy Birthday</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="cursor"></div>
+    <div
+      id="balloons-container"
+      class="balloons-container"
+      aria-hidden="true"
+    ></div>
+    <div id="confetti-burst" class="confetti-burst" aria-hidden="true"></div>
+    <audio
+      id="birthday-jingle"
+      src="jingle.mp3"
+      preload="auto"
+      playsinline
+    ></audio>
+
+    <!-- Jingle toast: centered modal overlay with play button if autoplay is blocked -->
+    <div
+      id="jingle-toast"
+      class="jingle-toast"
+      aria-live="polite"
+      role="dialog"
+      aria-modal="true"
+    >
+      <div class="jingle-card">
+        <div class="jingle-message">Listen to the birthday jingle 🎵</div>
+        <button id="jingle-play-btn" class="jingle-play-btn">
+          Play jingle
+        </button>
+      </div>
+    </div>
+
+    <div class="container">
+      <h1>Happiest 23rd Birthday Minahil Israr💗</h1>
+      <div class="greeting"></div>
+      <button class="cta-button">Click to Enter my Heart 💕</button>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
